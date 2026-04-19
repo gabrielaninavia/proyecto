@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto de tienda de música</title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+    <h1>Tienda de Música</h1>
+
+    <div id="indice">
+        <h2>Índice</h2>
+        <a href="#discos">Discos</a>
+        <a href="#stickers">Stickers</a>
+        <a href="#libros">Libros</a>
+        <a href="#carrito">Carrito</a>
+    </div>
+
+    <section id="discos">
+        <h2>Discos</h2>
+        <div class="contenedor-gen">
+            <div class="producto">
+                <h3>Disco 1</h3>
+                <a href="https://youtu.be/Z3cYQv1wcPI?list=PL3jt1B14YMe5NhJrgIN6Tq4DstzMpzm0o" target="_blank">
+                    <img src="imagenes/discos/cuco1.avif" alt="Disco 1">
+                </a>
+                <p>Precio: $25000</p>
+                <label>
+                    <input type="checkbox" id="vinilo1">Agregar vinilo (+$10000)
+                </label>
+                <br><br>
+                <button onclick="agregarDisco('Disco 1',25000,'vinilo1')">Agregar al carrito</button>
+            </div>
+
+            <div class="producto">
+                <h3>Disco 2</h3>
+                <a href="https://www.youtube.com/watch?v=gExymupoNIg&list=PL3jt1B14YMe5NhJrgIN6Tq4DstzMpzm0o&index=13" target="_blank">
+                    <img src="imagenes/discos/cuco2.jpg" alt="Disco 2">
+                </a>
+                <p>Precio: $15000</p>
+                <label>
+                    <input type="checkbox" id="vinilo2">Agregar vinilo (+$10000)
+                </label>
+                <br><br>
+                <button onclick="agregarDisco('Disco 2',15000,'vinilo2')">Agregar al carrito</button>
+            </div>
+
+            <div class="producto">
+                <h3>Disco 3</h3>
+                <a href="https://youtu.be/Jp5NVzoQeT4?list=PL3jt1B14YMe5NhJrgIN6Tq4DstzMpzm0o" target="_blank">
+                    <img src="imagenes/discos/cuco3.jpg" alt="Disco 3">
+                </a>
+                <p>Precio: $10000</p>
+                <label>
+                    <input type="checkbox" id="vinilo3">Agregar vinilo (+$10000)
+                </label>
+                <br><br>
+                <button onclick="agregarDisco('Disco 3',10000,'vinilo3')">Agregar al carrito</button>
+            </div>
+
+            <div class="producto">
+                <h3>Disco 4</h3>
+                <a href="https://youtu.be/qsAFKhBLhg4?list=PL3jt1B14YMe5NhJrgIN6Tq4DstzMpzm0o" target="_blank">
+                    <img src="imagenes/discos/cuco4.jpg" alt="Disco 4">
+                </a>
+                <p>Precio: $17000</p>
+                <label>
+                    <input type="checkbox" id="vinilo4">Agregar vinilo (+$10000)
+                </label>
+                <br><br>
+                <button onclick="agregarDisco('Disco 4',17000,'vinilo4')">Agregar al carrito</button>
+            </div>
+
+            <div class="producto">
+                <h3>Disco 5</h3>
+                <a href="https://youtu.be/HqnLu9s0UQU?list=RDHqnLu9s0UQU" target="_blank">
+                    <img src="imagenes/discos/cuco 5.jpg" alt="Disco 5">
+                </a>
+                <p>Precio: $12000</p>
+                <label>
+                    <input type="checkbox" id="vinilo5">Agregar vinilo (+$10000)
+                </label>
+                <br><br>
+                <button onclick="agregarDisco('Disco 5',12000,'vinilo5')">Agregar al carrito</button>
+            </div>
+            <a href="#indice">Volver al índice</a>
+        </div>
+        
+
+    </section>
+
+    <section id="stickers">
+        <h2>Stickers</h2>
+        <div class="contenedor-gen">
+            <div class="producto sticker" onclick="agregarSticker('Sticker 1',1000)">
+                <img src="imagenes/stickers/patito.jfif" title="ola soy un poio" alt="Sticker 1">
+            </div>
+
+            <div class="producto sticker" onclick="agregarSticker('Sticker 2',2000)">
+                <img src="imagenes/stickers/sticker2.jpeg" title="grasias sonik" alt="Sticker 2">
+            </div>
+
+            <div class="producto sticker" onclick="agregarSticker('Sticker 3',3000)">
+                <img src="imagenes/stickers/sticker3.jpg" title="panita miguel" alt="Sticker 3">
+            </div>
+
+            <div class="producto sticker" onclick="agregarSticker('Sticker 4',2500)">
+                <img src="imagenes/stickers/sticker4.jpeg" title="quien soy" alt="Sticker 4">
+            </div>
+
+            <div class="producto sticker" onclick="agregarSticker('Sticker 5',800)">
+                <img src="imagenes/stickers/yes.jpg" title="si que" alt="Sticker 5">
+            </div>
+            <a href="#indice">Volver al índice</a>
+        </div>
+        
+    </section>
+
+    <section id="libros">
+        <h2>Libros</h2>
+        <div class="contenedor-gen">
+            <div class="li-libro">
+            <img src="imagenes/libros/libro1.jpg" alt="Libro 1">
+            <p>Precio: $25010</p>
+            <div class="casa-tapa">
+                <label><input type="radio" name="tapa1"> Tapa dura</label>
+                <label><input type="radio" name="tapa1"> Tapa blanda</label>
+            </div>
+            <button onclick="agregarLibro('Libro 1',25010,'tapa1')">Agregar al carrito</button>
+        </div>
+
+        <div class="li-libro">
+            <img src="imagenes/libros/libtrt.jpg" alt="Libro 2">
+            <p>Precio: $30000</p>
+            <div class="casa-tapa">
+                <label><input type="radio" name="tapa2"> Tapa dura</label>
+                <label><input type="radio" name="tapa2"> Tapa blanda</label>
+            </div>
+            <button onclick="agregarLibro('Libro 2',30000,'tapa2')">Agregar al carrito</button>
+        </div>
+
+        <div class="li-libro">
+            <img src="imagenes/libros/libro3.jpg" alt="Libro 3">
+            <p>Precio: $76000</p>
+            <div class="casa-tapa">
+                <label><input type="radio" name="tapa3"> Tapa dura</label>
+                <label><input type="radio" name="tapa3"> Tapa blanda</label>
+            </div>
+            <button onclick="agregarLibro('Libro 3',76000,'tapa3')">Agregar al carrito</button>
+        </div>
+
+        <div class="li-libro">
+            <img src="imagenes/libros/libro4.jpg" alt="Libro 4">
+            <p>Precio: $11600</p>
+            <div class="casa-tapa">
+                <label><input type="radio" name="tapa4"> Tapa dura</label>
+                <label><input type="radio" name="tapa4"> Tapa blanda</label>
+            </div>
+            <button onclick="agregarLibro('Libro 4',11600,'tapa4')">Agregar al carrito</button>
+        </div>
+
+        <div class="li-libro">
+            <img src="imagenes/libros/libro5.webp" alt="Libro 5">
+            <p>Precio: $38600</p>
+            <div class="casa-tapa">
+                <label><input type="radio" name="tapa5"> Tapa dura</label>
+                <label><input type="radio" name="tapa5"> Tapa blanda</label>
+            </div>
+            <button onclick="agregarLibro('Libro 5',38600,'tapa5')">Agregar al carrito</button>
+        </div>
+        <a href="#indice">Volver al índice</a>
+        </div>
+    </section>
+
+    <section id="carrito">
+        <h2>Carrito</h2>
+        <div id="listaCarrito"></div>
+        <h3 id="totalCarrito">Total: $0</h3>
+        <a href="#indice">Volver al índice</a>
+    </section>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
