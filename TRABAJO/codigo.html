@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>MUSICAA</title>
+    <link rel="stylesheet" href="diseño.css">
+</head>
+<body>
+
+    <h1>MUSICA</h1>
+
+    <input id="buscar">
+    <button onclick="buscar()">Buscar</button>
+
+    <p id="nombre">Nombre canción</p>
+    <p id="artista">Artista</p>
+
+    <img id="imagen">
+
+    <br><br>
+
+    <button onclick="anterior()">atras</button>
+    <button onclick="siguiente()">siguiente</button>
+
+<script>
+
+const URL = "https://itunes.apple.com/search?term="
+
+let consulta
+let canciones
+let indice = 0
+
+async function buscar() {
+
+    let texto = document.getElementById("buscar").value
+
+    consulta = await fetch(URL + texto + "&entity=song")
+    consulta = await consulta.json()
+
+    canciones = consulta.results
+
+    indice = 0
+
+    mostrar()
+}
+async function mostrar() {
+
+    document.getElementById("nombre").textContent = canciones[indice].trackName
+    document.getElementById("artista").textContent = canciones[indice].artistName
+    document.getElementById("imagen").src = canciones[indice].artworkUrl100.replace("100x100","600x600")
+}
+async function siguiente() {
+
+    indice++
+    if(indice >= canciones.length){
+        indice = 0
+    }
+    mostrar()
+}
+async function anterior() {
+
+    indice--
+    if(indice < 0){
+        indice = canciones.length - 1
+    }
+    mostrar()
+}
+
+</script>
+
+</body>
+</html>
